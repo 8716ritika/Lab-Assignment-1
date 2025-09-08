@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define MAX 5  // maximum size of stack
+#define MAX 5  
 
 class Stack {
     int arr[MAX];
@@ -10,7 +10,7 @@ class Stack {
 public:
     Stack() { top = -1; }
 
-    // (i) Push operation
+    
     void push(int val) {
         if (isFull()) {
             cout << "Stack Overflow! Cannot push " << val << endl;
@@ -20,7 +20,7 @@ public:
         }
     }
 
-    // (ii) Pop operation
+    
     void pop() {
         if (isEmpty()) {
             cout << "Stack Underflow! Nothing to pop.\n";
@@ -29,17 +29,16 @@ public:
         }
     }
 
-    // (iii) isEmpty()
+    
     bool isEmpty() {
         return (top == -1);
     }
 
-    // (iv) isFull()
     bool isFull() {
         return (top == MAX - 1);
     }
 
-    // (v) Display stack
+    
     void display() {
         if (isEmpty()) {
             cout << "Stack is empty!\n";
@@ -52,7 +51,7 @@ public:
         }
     }
 
-    // (vi) Peek (Top element)
+    
     void peek() {
         if (isEmpty()) {
             cout << "Stack is empty! No top element.\n";
