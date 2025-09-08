@@ -39,13 +39,13 @@ int main() {
 
     Stack s;
 
-    // Push all characters into stack
+    
     for (int i = 0; i < strlen(str); i++) {
         s.push(str[i]);
     }
 
     cout << "Reversed string: ";
-    // Pop all characters
+    
     while (!s.isEmpty()) {
         cout << s.pop();
     }
