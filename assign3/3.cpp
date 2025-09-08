@@ -2,7 +2,6 @@
 #include <stack>
 using namespace std;
 
-// Helper function to check matching brackets
 bool isMatchingPair(char open, char close) {
     return (open == '(' && close == ')') ||
            (open == '{' && close == '}') ||
@@ -14,17 +13,17 @@ bool isBalanced(string expr) {
 
     for (char c : expr) {
         if (c == '(' || c == '{' || c == '[') {
-            s.push(c); // push opening bracket
+            s.push(c); 
         } 
         else if (c == ')' || c == '}' || c == ']') {
             if (s.empty() || !isMatchingPair(s.top(), c)) {
-                return false; // mismatch
+                return false;
             }
-            s.pop(); // matched pair
+            s.pop(); 
         }
     }
 
-    return s.empty(); // balanced if no leftover opening
+    return s.empty()
 }
 
 int main() {
